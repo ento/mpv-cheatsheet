@@ -1,0 +1,18 @@
+{
+  "name": "mpv-cheatsheet",
+  "version": "0.30.0",
+  "description": "mpv script for looking up keyboard shortcuts",
+  "main": "src/index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^16.5.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "mpv"
+  ],
+  "author": "Marica Odagaki",
+  "license": "ISC"
+}
