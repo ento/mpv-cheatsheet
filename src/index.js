@@ -3,7 +3,7 @@ var shortcuts = [
   {
     category: 'Navigation',
     shortcuts: [
-      {keys: '. / ,', effect: 'Seek by frame'},
+      {keys: ', / .', effect: 'Seek by frame'},
       {keys: '← / →', effect: 'Seek by 5 seconds'},
       {keys: '↑ / ↓', effect: 'Seek by 1 minute'},
       {keys: '[Shift] PGUP / PGDWN', effect: 'Seek by 10 minutes'},
