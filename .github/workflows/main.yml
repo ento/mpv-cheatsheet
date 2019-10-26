@@ -1,0 +1,32 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    container: nixos/nix:2.3
+
+    steps:
+    - uses: actions/checkout@v1
+    - run: nix-shell --run "make"
+    - uses: actions/upload-artifact@master
+      with:
+        name: deliverable
+        path: dist/cheatsheet.js
+    - id: get_version
+      run: echo ::set-output name=VERSION::${GITHUB_REF#refs/tags/}
+      if: startsWith(github.ref, 'refs/tags/')
+    - run: mv dist/cheatsheet.js dist/mpv-cheatsheet-${VERSION}.js
+      if: startsWith(github.ref, 'refs/tags/')
+      env:
+        VERSION: ${{ steps.get_version.outputs.VERSION }}
+    - name: Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
+      with:
+        files: dist/mpv-cheatsheet-${VERSION}.js
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        VERSION: ${{ steps.get_version.outputs.VERSION }}
