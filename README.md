@@ -1,5 +1,9 @@
 # mpv-cheatsheet
 
+## Usage
+
+Press `?` to bring up the cheatsheet.
+
 ![Screenshot](./mpv-shot0001.jpg)
 
 ## Building locally
