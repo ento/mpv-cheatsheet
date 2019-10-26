@@ -1,5 +1,5 @@
 TARGET := dist/cheatsheet.js
-COMPILER := ./node_modules/.bin/browserify
+COMPILER := browserify
 
 $(TARGET): $(wildcard src/*.js)
 	mkdir -p $(@D)

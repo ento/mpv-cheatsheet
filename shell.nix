@@ -2,6 +2,6 @@
 }:
 pkgs.mkShell {
   buildInputs = [
-    pkgs.nodejs
+    pkgs.nodePackages.browserify
   ];
 }
