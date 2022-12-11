@@ -7,5 +7,5 @@ $(TARGET): $(wildcard src/*.js)
 
 .PHONY: install
 install: $(TARGET)
-	mkdir p ~/.config/mpv/scripts/
+	mkdir -p ~/.config/mpv/scripts/
 	cp $< ~/.config/mpv/scripts/
