@@ -2,14 +2,14 @@
 
 ## Installation
 
-Download the latest release from [releases page](https://github.com/ento/mpv-cheatsheet/releases/latest).
+Download the latest release from the [releases page](https://github.com/ento/mpv-cheatsheet/releases/latest).
 
 It can be passed directly using the `--script` option when launching mpv.
 ```sh
 mpv video.mp4 --script=mpv-cheatsheet.js
 ```
 
-or you can save the file in a `scripts` subdirectory (create one if it doesn't exist) in the mpv configuration directory ( usually `~/.config/mpv/scripts/`  or `C:\Users\<USERNAME>\AppData\Roaming\mpv\scripts` ) and mpv will launch the script everytime. [Learn more](https://mpv.io/manual/stable/#script-location).
+or you can save the file in a `scripts` subdirectory in the mpv configuration directory (usually `~/.config/mpv/scripts/` or `C:\Users\<USERNAME>\AppData\Roaming\mpv\scripts`; create one if it doesn't exist) and mpv will launch the script every time. [Learn more](https://mpv.io/manual/stable/#script-location).
 
 ## Usage
 
