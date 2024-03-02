@@ -242,7 +242,7 @@ var Keybindings = [
     keys: 'k',
     effect: 'prev line',
     callback: function() {
-      State.startLine = Math.max(0, State.startine - 1)
+      State.startLine = Math.max(0, State.startLine - 1)
       render()
     },
     options: 'repeatable'
